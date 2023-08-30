@@ -16,8 +16,9 @@
 -  Popups and Layout already setup with Grid.
 -  Social Media Login Plugin Support.  Default supplied: (Facebook, Google)
 -  Security already setup and ready to go from a client stand point.
--  Third Party Phone/Email Validation Systems.  Plugin System 
+-  Third Party Phone/Email Validation Systems.  Plugin System
 
-#### So you'd take this project. For mobile or for a webapp.  Use this as a starting template.  Add your setup and there you go start coding pages.. No blank page... User login totally not setup all that stuff you have to do before you start coding your landing page.  Ready to go.. Turns out it's always a pain in the you know what.  So Get this ready to go.. Use it.. And start coding your app.  Feel free to use for your own purposes.
+
+#### So you'd take this project. For mobile or for a webapp.  Use this as a starting template.  Add your css setup RENAME it and there you go start coding pages.. No blank page... User login totally not setup all that stuff you have to do before you start coding your landing page.  Ready to go.. Turns out it's always a pain in the you know what.  So Get this ready to go.. Use it.. And start coding your app.  Feel free to use for your own purposes.
 
 A nod out would not hurt.  This using the react-native and react create-app plugins to generate the app sturcture.  Utilizing TypeScript.

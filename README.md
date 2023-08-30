@@ -4,7 +4,8 @@
 -  Login / Logout
 -  Token JWT
 -  Local Storage to keep logged in state or page reload for time expired tokens.
--  Axios Setup to utilize the logged in token aquired.
+-  Axios Setup to utilize the logged in token aquired and a configurable header bearer token setup for HTTP/HTTPS rest api support against authenticated APIs.
+  -- This Includes Adding APIs.  APIs that go against an App Key and domain etc. etc.  and the slices for Redux already thought out and ready to expand upon.
 -  Reset Password, Email, Phone Support
 -  Forgot Passowrd, Emial, Phone Support
 -  2factor on/off

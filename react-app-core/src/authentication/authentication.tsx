@@ -42,7 +42,7 @@ const initialState: AuthState = {
 
 
 
-// Slice
+// Authentication Slice Reducer/Actions
 const authSlice: Slice<AuthState> = createSlice({
   name: "auth",
   initialState,

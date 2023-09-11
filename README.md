@@ -1,24 +1,48 @@
-# react-login-ready-empty-app
-## Empty template projects for react and react-native
-### The purpose: Ever get tired of having to re-implement standard boiler plate code for every project?
--  Login / Logout
--  Token JWT
--  Local Storage to keep logged in state or page reload for time expired tokens.
--  Axios Setup to utilize the logged in token aquired and a configurable header bearer token setup for HTTP/HTTPS rest api support against authenticated APIs.
-    - This Includes Adding APIs.  APIs that go against an App Key and domain etc. etc.  and the slices for Redux already thought out and ready to expand upon.
--  Reset Password, Email, Phone Support
--  Forgot Passowrd, Email, Phone Support
--  2factor on/off
--  Create User (based on plugins).
--  Deactivate Account.
--  Router Latest from React setup Same for React-native. (Sense I have to do much of the same for mobile).
--  Redux and redux-toolkit all properly setup with login and all these states implemented.  So all you have to do is start coding against an API.
--  Popups and Layout already setup with Grid.
--  Social Media Login Plugin Support.  Default supplied: (Facebook, Google)
--  Security already setup and ready to go from a client stand point.
--  Third Party Phone/Email Validation Systems.  Plugin System
+# React Login-Ready Empty App
 
+An empty template project primed for both React and React Native applications.
 
-##### So you'd take this project. For mobile or for a webapp.  Use this as a starting template.  Add your css setup RENAME it and there you go start coding pages.. No blank page... User login totally not setup all that stuff you have to do before you start coding your landing page.  Ready to go.. Turns out it's always a pain in the you know what.  So Get this ready to go.. Use it.. And start coding your app.  Feel free to use for your own purposes.
+## Introduction
 
-A nod out would not hurt.  This using the react-native and react create-app plugins to generate the app sturcture.  Utilizing TypeScript.
+Are you often frustrated with having to re-write or set up standard boilerplate code for every new project? This template is designed to save you that hassle. It comes preloaded with essential features so that you can dive straight into building unique functionalities for your app.
+
+## Features
+
+- **Authentication**
+  - Login / Logout
+  - Token JWT management
+  - Local Storage for logged-in state preservation
+  - Reset Password, Email, Phone Support
+  - Forgot Password, Email, Phone Support
+  - Two-factor authentication toggle
+  - User creation based on plugins
+  - Account deactivation
+  
+- **API and Data Management**
+  - Axios setup for token utilization
+  - Pre-configured header bearer token setup for HTTP/HTTPS API support
+  - Support for adding new APIs tailored to app keys, domains, etc.
+  - Redux slices ready for expansion
+  
+- **Routing**
+  - Latest routing setup for React and React Native
+  
+- **State Management**
+  - Redux and Redux Toolkit setup
+  - Pre-implemented states for login and associated features
+  
+- **UI/UX**
+  - Popups and grid layout pre-configured
+  - Social media login plugins (Default: Facebook, Google)
+  
+- **Security**
+  - Client-side security configurations
+  
+- **Third-Party Integrations**
+  - Phone/Email validation system via a plugin system
+
+## Additional Notes
+
+This template uses the react-native and react create-app plugins to generate the app structure, and it's built using TypeScript.
+
+Feel free to use and adapt this template as needed. If you find it helpful, a nod to the original project would be appreciated!

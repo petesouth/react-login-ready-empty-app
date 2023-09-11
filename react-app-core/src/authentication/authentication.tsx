@@ -42,11 +42,32 @@ const authSlice: Slice<AuthState> = createSlice({
   name: "auth",
   initialState,
   reducers: {
-    login: (state, action: PayloadAction<AuthState>) => {
+    login: (state: AuthState, action: PayloadAction<AuthState>) => {
       state = { ...state, ...action.payload };
     },
-    logout: (state) => {
+    logout: (state: AuthState) => {
       state = { ...initialState };
+    },
+    loginotp: (state: AuthState, action: PayloadAction<AuthState>) => {
+      state = { ...state, ...action.payload };
+    },
+    loginotpconfirmed: (state: AuthState, action: PayloadAction<AuthState>) => {
+      state = { ...state, ...action.payload };
+    },
+    fogotpassword: (state: AuthState, action: PayloadAction<AuthState>) => {
+      state = { ...state, ...action.payload };
+    },
+    fogotpasswordotp: (state: AuthState, action: PayloadAction<AuthState>) => {
+      state = { ...state, ...action.payload };
+    },
+    fogotpasswordotpconfirmed: (state: AuthState, action: PayloadAction<AuthState>) => {
+      state = { ...state, ...action.payload };
+    },
+    setauthtoken: (state: AuthState, action: PayloadAction<AuthState>) => {
+      state = { ...state, ...action.payload };
+    },
+    setuserdata: (state: AuthState, action: PayloadAction<AuthState>) => {
+      state = { ...state, ...action.payload };
     },
   },
 });
@@ -54,7 +75,15 @@ const authSlice: Slice<AuthState> = createSlice({
 
 
 // Login Hooks ---------
-export const { login, logout } = authSlice.actions;
+export const { login, 
+               logout, 
+               loginotp, 
+               loginotpconfirmed, 
+               forgotpassword, 
+               forgotpasswordotp, 
+               forgotpasswordotpconfirmed,
+               setauthtoken, 
+               setuserdata } = authSlice.actions;
 
 // Define a type that represents the entire application state.
 export type AppState = ReturnType<typeof initializeStore> extends {

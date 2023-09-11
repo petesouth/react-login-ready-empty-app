@@ -43,6 +43,6 @@ Are you often frustrated with having to re-write or set up standard boilerplate 
 
 ## Additional Notes
 
-This template uses the react-native and react create-app plugins to generate the app structure, and it's built using TypeScript.
+Library can be used in react-native and react applications.  Built in TypeScript.  Use this code when setting up your store and it adds the extra bits for the authenticated stats and axios for your api (with token)
 
 Feel free to use and adapt this template as needed. If you find it helpful, a nod to the original project would be appreciated!

@@ -5,6 +5,7 @@ import {
   Slice,
   AnyAction,
   ThunkDispatch,
+  Store 
 } from "@reduxjs/toolkit";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -26,6 +27,8 @@ export interface AuthState {
   userData: User | null;
 }
 
+
+
 const initialState: AuthState = {
   isAuthorizedUser: false,
   isLoginOtp: false,
@@ -36,6 +39,8 @@ const initialState: AuthState = {
   authToken: null,
   userData: null,
 };
+
+
 
 // Slice
 const authSlice: Slice<AuthState> = createSlice({
@@ -91,9 +96,38 @@ export type AppState = ReturnType<typeof initializeStore> extends {
 } ? S : never;
 
 export type GenericDispatch = ThunkDispatch<AppState, any, AnyAction>;
+/*
+Store initialization.  Pass in your apps slice reducers and they get added to the global store
+that this method returns.  This store then gets set in your apps Provider.
 
-// Store initialization
-export const initializeStore = (reducers: any = {}) => {
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import {initializeStore} './react-app-core'; // Import your Redux store
+import App from './App';
+
+
+const store = initializeStore( { 
+   example: exampleSlice.reducer,
+   users: myUsersSlice.reducer,
+   etc...
+});
+
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('root')
+);
+
+The auth namespace reducer is automatically added with your apps reducers.
+
+const { dispatch, state } = useAppCoreState();
+
+Is then how you access the data in your components.  (Replacing useSelect and useDispatch all over the place.)
+
+*/
+export const initializeStore = (reducers: any = {}) : Store => {
   return configureStore({
     reducer: {
       auth: authSlice.reducer,
@@ -103,13 +137,17 @@ export const initializeStore = (reducers: any = {}) => {
 };
 
 // Custom Hook
-interface UseAuthStoreType {
+interface AppCoreState {
   dispatch: GenericDispatch;
   state: AppState;
   actions: typeof authSlice.actions;
 }
 
-export const useAuthStore = (): UseAuthStoreType => {
+// The idea is to craete Slice Action Reducers mapped to name spaces for each reducer.
+// This method then becomes a replacement for useSelect and useDispatch 
+// The other reducers are added in the reducers paremater of the initalizeStore MEthod that sets the app stateup.
+// 
+export const useAppCoreState = (): AppCoreState => {
   const dispatch = useDispatch<GenericDispatch>();
   const state = useSelector((s: AppState) => s); // We give the state the AppState type here.
 

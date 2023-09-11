@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import { useAuthStore, AuthState, User } from './authentication/authentication';
+import { useAppCoreState, AuthState, User } from './authentication/authentication';
 import React from 'react';
 
 describe('Authentication Library', () => {
@@ -25,7 +25,7 @@ describe('Authentication Library', () => {
 
   it('should useAuthStore return correct state and actions', () => {
     function TestComponent() {
-      const { state, actions } = useAuthStore();
+      const { state, actions } = useAppCoreState();
       expect(state).toBeDefined();
       expect(actions.login).toBeDefined();
       expect(actions.logout).toBeDefined();
